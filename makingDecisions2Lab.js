@@ -1,36 +1,36 @@
-// For problems 1-2 use the following lines of code:
+// // // For problems 1-2 use the following lines of code:
 var arr = [10,20,30,40,50,60]
 
-////////// PROBLEM 1 //////////
-/*
-  Create a variable named 'firstItem' and set it equal to the first value of the 'arr' array.
-*/
+// // ////////// PROBLEM 1 //////////
+// // /*
+// //   Create a variable named 'firstItem' and set it equal to the first value of the 'arr' array.
+// // */
 
-let firstItem = 10
+let firstItem = arr 
 
-
-////////// PROBLEM 2 //////////
-/*
-  Remove the last item from the 'arr' array and store it in a variable named 'lastItemRemoved'. Console.log the array to verify you no longer have the last item.
-*/
+// // ////////// PROBLEM 2 //////////
+// // /*
+// //   Remove the last item from the 'arr' array and store it in a variable named 'lastItemRemoved'. Console.log the array to verify you no longer have the last item.
+// // */
 
 let lastItemRemoved = arr.pop()
 
 console.log (arr)
 
-////////// PROBLEM 3 //////////
+// // ////////// PROBLEM 3 //////////
 
-// Do not edit the code below.
+// // // Do not edit the code below.
 var family = ['Tyler', 'Jordan', 'Ryan', 'Alice', 'Ireland'];
-// Do not edit the code above.
+// // // Do not edit the code above.
 
-/*
-  Loop through the 'family' array and console.log every item.
-*/
+// // /*
+// //   Loop through the 'family' array and console.log every item.
+// // */
 
-//Code Here
-
-
+for (let i = 0; i < family.length; i++)
+{
+console.log (family[i])
+}
 
 ////////// PROBLEM 4 //////////
 
@@ -43,9 +43,14 @@ let evensArr = []
   Use a for-loop to iterate through each number in the 'nums' array, if the number is even, append it to the 'evensArr'.
 */
 
-//Code Here
-
-
+for (let i = 0; i < nums.length; i++)
+{
+  if (nums[i] % 2 === 0)
+  {
+evensArr.push(nums[i])
+  }
+  console.log (evensArr)
+}
 
 ////////// PROBLEM 5 //////////
 
@@ -54,10 +59,34 @@ var score = 74
 // Do not edit the code above.
 
 /*
-  Determine if the letter grade of the given variable 'score'. If the variable is a 90 or above, console log an 'A', between 80 and 89, console log a 'B', between 70 and 79, 'C', between 60 and 69, 'D', and anything below 60 should console log an 'F'.
+  Determine if the letter grade of the given variable 'score'. 
+  If the variable is a 90 or above, console log an 'A'
+  , between 80 and 89, console log a 'B'
+  , between 70 and 79, 'C',
+  between 60 and 69, 'D', 
+  and anything below 60 should console log an 'F'.
 */
 
-//Code Here
+if (score >= 90)
+{
+  console.log ('A')
+}
+else if (score >= 80 && score <= 89)
+{
+  console.log ('B')
+}
+else if (score >= 70 && score <= 79)
+{
+  console.log ('C')
+}
+else if (score >= 60 && score <= 69)
+{
+  console.log ('D')
+}
+else if (score < 60)
+{
+  console.log ('F')
+}
 
 
 ////////// Intermediate Problems //////////
@@ -65,14 +94,16 @@ var score = 74
 ////////// PROBLEM 6 //////////
 
 // Do not edit the code below.
-var myFavoriteNumbers = [4,8,12,16,20,24];
+var myFavoriteNumbers = [4,8,12,16,20,24,20,21,23];
 // Do not edit the code above.
 
 /*
   Create a variable named 'someNum' and set it equal to the fifth value of the 'myFavoriteNumbers' array.
 */
 
-//Code Here
+let someNum = myFavoriteNumbers[i = 4]
+
+console.log (someNum)
 
 
 ////////// PROBLEM 7 //////////
@@ -80,8 +111,19 @@ var myFavoriteNumbers = [4,8,12,16,20,24];
 // Subscripting (accessing values using their index) an array can fail. What happens if you subscript to the 7th element, but there are not 7 elements in the array? Let's write some code to check for that. 
 // Use an if statement to check the length of the 'myFavoriteNumbers' array. If it's less than 7, log 'There are not enough elements in this array' to the console. If the length is more than 7, reassign the value of 'someNum' to the value of the 7th element in the array. (Hint: how can you make sure that your code works for exactly 7 elements? What index do you use to get the 7th element?)
 
-//Code Here
-
+if (myFavoriteNumbers.length < 7)
+{
+console.log ('There are not enough elements in this array')
+}
+else if (myFavoriteNumbers.length > 7)
+{
+  someNum = myFavoriteNumbers[i = 8]
+  console.log (someNum)
+}
+else if (myFavoriteNumbers.length === 7)
+{
+  console.log ('you are good to go')
+}
 
 ////////// PROBLEM 8 //////////
 
@@ -91,7 +133,13 @@ var listOfNumbers = [1,2,3,4,5,6,7,8,9,10,11,12];
 
 // Use a for-loop to iterate through 'listOfNumbers', checking to see if each number is divisible by 3. If it is, console.log '{number} is divisible by 3.'
 
-//Code Here
+for (let i = 0; i < listOfNumbers.length; i++)
+{
+  if (listOfNumbers[i] % 3 === 0)
+  {
+    console.log (`${listOfNumbers[i]} is divisible 3`)
+  }
+}
 
 
 ////////// PROBLEM 9 //////////
@@ -103,7 +151,10 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
   Loop backwards, starting at the end of the 'letters' array. Console log every item in the array.
 */
 
-//Code Here
+for (let i = 4; i >= 0; i--) 
+{
+  console.log (letters[i])
+}
 
 
 ////////// Advanced Problems //////////
